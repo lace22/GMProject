@@ -58,8 +58,8 @@ grip=0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//check slopes
-with(collision_point(x,y+16,obj_block,true,true))
+            <string>/*check slopes
+with(collision_point(x,y+16,obj_grass,true,true))
 {
 if(slope!=0)
 {
@@ -124,33 +124,6 @@ if place_free(x,y+1) then gravity=grav else gravity=0
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_grass">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>move_contact_solid(direction,0)
-if place_meeting(x,y+1,obj_grass) then vspeed=0
-if place_meeting(x,y-1,obj_grass) then vspeed=0
-if place_meeting(x+1,y,obj_grass) then hspeed=0
-if place_meeting(x-1,y,obj_grass) then hspeed=0
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="gripwall">
       <action>
         <libid>1</libid>
@@ -197,14 +170,14 @@ if place_meeting(x-1,y,gripwall) then hspeed=0
           <argument>
             <kind>1</kind>
             <string>vspeed = jump_speed
-if place_meeting(x,y+1,obj_block) and keyboard_check(vk_up) then vspeed=-19
+if place_meeting(x,y+1,obj_grass) and keyboard_check(vk_up) then vspeed=-19
 
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_block">
+    <event eventtype="4" ename="obj_grass">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -221,12 +194,11 @@ if place_meeting(x,y+1,obj_block) and keyboard_check(vk_up) then vspeed=-19
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//When colliding with the object stop moving
-move_contact_solid(direction,0)
-if place_meeting(x,y+1,obj_block) then vspeed=0
-if place_meeting(x,y-1,obj_block) then vspeed=0
-if place_meeting(x+1,y,obj_block) then hspeed=0
-if place_meeting(x-1,y,obj_block) then hspeed=0
+            <string>move_contact_solid(direction,0)
+if place_meeting(x,y+1,obj_grass) then vspeed=0
+if place_meeting(x,y-1,obj_grass) then vspeed=0
+if place_meeting(x+1,y,obj_grass) then hspeed=0
+if place_meeting(x-1,y,obj_grass) then hspeed=0
 </string>
           </argument>
         </arguments>

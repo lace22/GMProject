@@ -7,11 +7,8 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_block</sprite>
-    <sprite>sprites\spr_dog_running</sprite>
     <sprite>sprites\springanimation2</sprite>
     <sprite>sprites\player</sprite>
-    <sprite>sprites\spr_dog_still</sprite>
     <sprite>sprites\spr_block_outline</sprite>
     <sprite>sprites\sprite4</sprite>
     <sprite>sprites\portal</sprite>
@@ -34,9 +31,8 @@
     <object>objects\obj_grip</object>
     <object>objects\obj_dia</object>
     <object>objects\obj_grass</object>
+    <object>objects\object9</object>
     <object>objects\obj_player</object>
-    <object>objects\obj_block</object>
-    <object>objects\object4</object>
     <object>objects\obj_area</object>
     <object>objects\obj_draw</object>
     <object>objects\obj_res</object>
